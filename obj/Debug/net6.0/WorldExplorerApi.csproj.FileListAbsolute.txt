@@ -36,3 +36,9 @@ C:\Users\mbbc2\source\repos\WorldExplorerApi\WorldExplorerApi\bin\Debug\net6.0\S
 C:\Users\mbbc2\source\repos\WorldExplorerApi\WorldExplorerApi\bin\Debug\net6.0\System.Web.Http.Cors.dll
 C:\Users\mbbc2\source\repos\WorldExplorerApi\WorldExplorerApi\bin\Debug\net6.0\Newtonsoft.Json.dll
 C:\Users\mbbc2\source\repos\WorldExplorerApi\WorldExplorerApi\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
+C:\Users\mbbc2\source\repos\WorldExplorerApi\WorldExplorerApi\bin\Debug\net6.0\GraphQL.Client.dll
+C:\Users\mbbc2\source\repos\WorldExplorerApi\WorldExplorerApi\bin\Debug\net6.0\GraphQL.Client.Abstractions.dll
+C:\Users\mbbc2\source\repos\WorldExplorerApi\WorldExplorerApi\bin\Debug\net6.0\GraphQL.Client.Abstractions.Websocket.dll
+C:\Users\mbbc2\source\repos\WorldExplorerApi\WorldExplorerApi\bin\Debug\net6.0\GraphQL.Client.Serializer.Newtonsoft.dll
+C:\Users\mbbc2\source\repos\WorldExplorerApi\WorldExplorerApi\bin\Debug\net6.0\GraphQL.Primitives.dll
+C:\Users\mbbc2\source\repos\WorldExplorerApi\WorldExplorerApi\bin\Debug\net6.0\System.Reactive.dll

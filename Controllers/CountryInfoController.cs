@@ -6,20 +6,13 @@ namespace WorldExplorerApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ContriesController : ControllerBase
+    public class CountryInfoController : ControllerBase
     {
-        // GET: api/<ContriesController>
-        [HttpGet]
-        public IEnumerable<string> Get()
+        // GET: api/<ValuesController>
+        [HttpGet("{countryName}")]
+        public IEnumerable<string> Get([FromRoute] string countryName)
         {
             return new string[] { "value1", "value2" };
-        }
-
-        // GET api/<ContriesController>/5
-        [HttpGet("{id}")]
-        public string Get(int id)
-        {
-            return "value";
         }
 
     }
