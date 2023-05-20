@@ -1,3 +1,6 @@
+using Microsoft.AspNetCore.Http.Extensions;
+using WorldExplorerApi.Controllers.ApiHelpers;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -16,6 +19,9 @@ builder.Services.AddCors(options =>
 
     options.AddDefaultPolicy(builder => { builder.WithOrigins(frontendURL).AllowAnyMethod().AllowAnyHeader(); });
 });
+
+builder.Services.AddTransient<CountryInfoService>();
+builder.Services.AddTransient<GraphQLApiService>();
 
 var app = builder.Build();
 
