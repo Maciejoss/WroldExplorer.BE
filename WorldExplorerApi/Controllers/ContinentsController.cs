@@ -3,6 +3,8 @@ using GraphQL.Client.Http;
 using WorldExplorerApi.Models.Continent;
 using WorldExplorerApi.Models.Country;
 using WorldExplorerApi.Controllers.ApiHelpers;
+using System;
+using System.Diagnostics.Metrics;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -12,11 +14,10 @@ namespace WorldExplorerApi.Controllers
     [ApiController]
     public class ContinentsController : ControllerBase
     {
-        GraphQLHttpClient graphQLClient;
         GraphQLApiService _graphQLApiService;
         CountryInfoService _countryInfoService;
 
-        public ContinentsController(CountryInfoService countryInfoService,GraphQLApiService graphQLApiService, IConfiguration configuration)
+        public ContinentsController(CountryInfoService countryInfoService,GraphQLApiService graphQLApiService)
         {
             _graphQLApiService = graphQLApiService;
             _countryInfoService = countryInfoService;
@@ -41,14 +42,12 @@ namespace WorldExplorerApi.Controllers
 
             Random rnd = new Random();
 
-            var selectedCountries =  graphQLResponse.OrderBy(x=>rnd.Next()).Take(count);
-            List<CountryInfo> countryInfos = new List<CountryInfo>();
-
-            foreach (var country in selectedCountries) { countryInfos.Add(await _countryInfoService.GetCountryInfo(country.Name)); }
+            var countryInfos = await _countryInfoService.SelectRandomCountriesInfos(graphQLResponse.ToList(), count);
 
             return countryInfos;
 
         }
 
-    }
+
+        }
 }
